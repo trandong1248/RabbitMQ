@@ -141,22 +141,6 @@ namespace _2.RabbitMq.Consumer.Api
 
             services.AddTransient<EmailIntegrationHandler>();
 
-            //services.AddTransient<ReportNotificationIntegrationHandler>();
-            //services.AddTransient<NotifyReportStatusIsDeliveredIntegrationHandler>();
-            //services.AddTransient<NotifyReportStatusIsExpiredIntegrationHandler>();
-            //services.AddTransient<NotifyReportStatusIsPendingIntegrationHandler>();
-            //services.AddTransient<NotifyReportStatusIsRevokedIntegrationHandler>();
-            //services.AddTransient<ExtractDataIntegrationHandler>();
-            //services.AddTransient<RemoveExtractDataIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsApprovedIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsCompletedIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsDeliveredIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsExpiredIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsPendingIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsRejectedIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsRevokedIntegrationHandler>();
-            //services.AddTransient<NotifyFormStatusIsSentIntegrationHandler>();
-
             // EventBusSubscriptionsManager
             services.AddSingleton<IEventBusSubscriptionsManager, EventBusSubscriptionsManager>();
         }
@@ -166,22 +150,6 @@ namespace _2.RabbitMq.Consumer.Api
             var eventBus = app.ApplicationServices.GetRequiredService<IEventBusRabbitMQ>();
 
             eventBus.Subscribe<EmailIntegrationEvent, EmailIntegrationHandler>();
-            //eventBus.Subscribe<ReportNotificationIntegrationEvent, ReportNotificationIntegrationHandler>();
-            //eventBus.Subscribe<NotifyReportStatusIsDeliveredIntegrationEvent, NotifyReportStatusIsDeliveredIntegrationHandler>();
-            //eventBus.Subscribe<NotifyReportStatusIsExpiredIntegrationEvent, NotifyReportStatusIsExpiredIntegrationHandler>();
-            //eventBus.Subscribe<NotifyReportStatusIsPendingIntegrationEvent, NotifyReportStatusIsPendingIntegrationHandler>();
-            //eventBus.Subscribe<NotifyReportStatusIsRevokedIntegrationEvent, NotifyReportStatusIsRevokedIntegrationHandler>();
-            //eventBus.Subscribe<ExtractDataIntegrationEvent, ExtractDataIntegrationHandler>();
-            //eventBus.Subscribe<RemoveExtractDataIntegrationEvent, RemoveExtractDataIntegrationHandler>();
-
-            //eventBus.Subscribe<NotifyFormStatusIsApprovedIntegrationEvent, NotifyFormStatusIsApprovedIntegrationHandler>();
-            //eventBus.Subscribe<NotifyFormStatusIsCompletedIntegrationEvent, NotifyFormStatusIsCompletedIntegrationHandler>();
-            //eventBus.Subscribe<NotifyFormStatusIsDeliveredIntegrationEvent, NotifyFormStatusIsDeliveredIntegrationHandler>();
-            //eventBus.Subscribe<NotifyFormStatusIsExpiredIntegrationEvent, NotifyFormStatusIsExpiredIntegrationHandler>();
-            //eventBus.Subscribe<NotifyFormStatusIsPendingIntegrationEvent, NotifyFormStatusIsPendingIntegrationHandler>();
-            //eventBus.Subscribe<NotifyFormStatusIsRejectedIntegrationEvent, NotifyFormStatusIsRejectedIntegrationHandler>();
-            //eventBus.Subscribe<NotifyFormStatusIsRevokedIntegrationEvent, NotifyFormStatusIsRevokedIntegrationHandler>();
-            //eventBus.Subscribe<NotifyFormStatusIsSentIntegrationEvent, NotifyFormStatusIsSentIntegrationHandler>();
         }
     }
 }
